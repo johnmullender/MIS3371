@@ -13,7 +13,7 @@ let text = d.toLocaleDateString();
 document.getElementByID("today").innerHTML = text;
 
 // range slide js code
-let slider = document.getElementById("prange")
+let slider = document.getElementById("range")
     let output = document.getElementById("range-slider")
     output.innerHTML = slider.value;
 
