@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--
+    Program Name: index.html
+    Author: John Mullender
+    Date created: February 22, 2026
+    Date modified: February 26, 2026
+    Version: 1.1
+    Purpose: Homework1 HTML Form
+-->
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="hw1.css"> <!-- links to css file -->
+    <title>New Patient Registration | The Gilgeous Foundation</title>
+</head>
+<body>
+  <header>
+    <table width="100%">
+      <tr>
+        <td valign="top" align="left" width="20%">
+          <div class="image">
+            <img align="center" src="shai.png" alt="Shai Gilgeous Alexander" width="350" id="logo"/>
+          </div>
+        </td>
+
+        <td>
+          <h2>The Gilgeous Foundation</h2>
+        </td>
+
+        <td valign="bottom" align="right" width="20%">
+          Today's Date: <span id="today"></span>
+        </td>
+      </tr>
+    </table>
+  </header>
+<hr>
+<!-- Form Starts Here -->
+<form action="thankyou.html">
+  <center>
+   <div class="format">
+     <table>
+       <tr>
+         <th colspan="4">Create Patient Portal Account</th>
+       </tr>
+       <!-- patient's info section of form starts here -->
+
+       <!-- First Name -->
+       <tr>
+         <td class="td1"><label for="fname">First Name</label></td>
+         <td>
+           <input type="text"
+                  name="fname"
+                  id="fname"
+                  maxlength="30"
+                  title="Please enter your first name"
+                  required
+                  placeholder="John"
+           />
+         </td>
+       </tr>
+
+       <!-- Middle Initial -->
+       <tr>
+         <td class="td1"><label for="mname">First Name</label></td>
+         <td>
+           <input type="text"
+                  name="mname"
+                  id="mname"
+                  maxlength="1"
+                  title="Please enter your middle initial"
+                  placeholder="M"
+           />
+         </td>
+       </tr>
+
+       <!-- Last Name -->
+       <tr>
+         <td class="td1"><label for="lname">First Name</label></td>
+         <td>
+           <input type="text"
+                  name="lname"
+                  id="lname"
+                  maxlength="30"
+                  title="Please enter your last name"
+                  required
+                  placeholder="Mullender"
+           />
+         </td>
+       </tr>
+
+       <!-- Gender or Sex -->
+       <tr>
+         <td class="td1"><label for="psex">Patient's Sex</label></td>
+         <td>
+           <input
+                   type ="radio"
+                   id="psex"
+                   name="s1"
+                   value="Male"
+           />
+           Male
+
+           <input
+                   type ="radio"
+                   id="s2"
+                   name="psex"
+                   value="Female"
+           />
+           Female
+
+           <input
+                   type ="radio"
+                   id="s3"
+                   name="psex"
+                   value="Other"
+           />
+           Other
+         </td>
+       </tr>
+
+       <!-- Date of birth -->
+
+       <tr>
+         <td class="td1"><label for="dob">Date of Birth</label></td>
+         <td>
+           <input type="date"
+                  name="dob"
+                  id="dob"
+           />
+         </td>
+       </tr>
+
+       <!-- SSN -->
+
+       <tr>
+         <td class="td1"><label for="ssn">SSN</label></td>
+         <td>
+           <input type="password"
+                  name="ssn"
+                  id="ssn"
+                  minlength="9"
+                  maxlength="11"
+                  title="Please enter your Social Security Number"
+                  required
+                  placeholder="111-11-1111"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <th colspan="4"><hr></th>
+       </tr>
+
+       <tr>
+         <th colspan="4">Patient Contact Information</th>
+       </tr>
+
+       <!-- Address -->
+
+       <tr>
+         <td class="td1"><label for="address1">Address 1</label></td>
+         <td>
+           <input type="text"
+                  name="address1"
+                  id="address1"
+                  maxlength="30"
+                  title="Please enter your address"
+                  required
+                  placeholder="4242 Okc Dr"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="address2">Address 2</label></td>
+         <td>
+           <input type="text"
+                  name="address2"
+                  id="address2"
+                  maxlength="30"
+                  title="Please enter your address"
+                  placeholder="4442 Okc Dr"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="city">City</label></td>
+         <td>
+           <input type="text"
+                  name="city"
+                  id="city"
+                  maxlength="30"
+                  title="Please enter your city"
+                  placeholder="Oklahoma City"
+           />
+         </td>
+       </tr>
+
+       <!-- All states including DC and PR -->
+
+       <tr>
+         <td><label for="state">State</label></td>
+         <td>
+           <select>
+             <option selected disabled>Please select one</option>
+             <option value="AL">Alabama</option>
+             <option value="AK">Alaska</option>
+             <option value="AZ">Arizona</option>
+             <option value="AR">Arkansas</option>
+             <option value="CA">California</option>
+             <option value="CO">Colorado</option>
+             <option value="CT">Connecticut</option>
+             <option value="DE">Delaware</option>
+             <option value="DC">District of Columbia</option>
+             <option value="FL">Florida</option>
+             <option value="GA">Georgia</option>
+             <option value="HI">Hawaii</option>
+             <option value="ID">Idaho</option>
+             <option value="IL">Illinois</option>
+             <option value="IN">Indiana</option>
+             <option value="IA">Iowa</option>
+             <option value="KS">Kansas</option>
+             <option value="KY">Kentucky</option>
+             <option value="LA">Louisiana</option>
+             <option value="ME">Maine</option>
+             <option value="MD">Maryland</option>
+             <option value="MA">Massachusetts</option>
+             <option value="MI">Michigan</option>
+             <option value="MN">Minnesota</option>
+             <option value="MS">Mississippi</option>
+             <option value="MT">Montana</option>
+             <option value="NE">Nebraska</option>
+             <option value="NV">Nevada</option>
+             <option value="NH">New Hampshire</option>
+             <option value="NJ">New Jersey</option>
+             <option value="NM">New Mexico</option>
+             <option value="NY">New York</option>
+             <option value="NC">North Carolina</option>
+             <option value="ND">North Dakota</option>
+             <option value="OH">Ohio</option>
+             <option value="OK">Oklahoma</option>
+             <option value="OR">Oregon</option>
+             <option value="PA">Pennsylvania</option>
+             <option value="PR">Puerto Rico</option>
+             <option value="RI">Rhode Island</option>
+             <option value="SC">South Carolina</option>
+             <option value="SD">South Dakota</option>
+             <option value="TN">Tennessee</option>
+             <option value="TX">Texas</option>
+             <option value="UT">Utah</option>
+             <option value="VT">Vermont</option>
+             <option value="VA">Virginia</option>
+             <option value="WA">Washington</option>
+             <option value="WV">West Virginia</option>
+             <option value="WI">Wisconsin</option>
+             <option value="WY">Wyoming</option>
+           </select>
+         </td>
+       </tr>
+
+       <!-- Zip code -->
+
+       <tr>
+         <td class="td1"><label for="zip">Zip Code</label></td>
+         <td>
+           <input type="text"
+                  name="zip"
+                  id="zip"
+                  minlength="5"
+                  maxlength="10"
+                  pattern="[0-9][5-10]"
+                  title="Please enter your zip code"
+                  required
+                  placeholder="123456"
+           />
+         </td>
+       </tr>
+
+       <!-- Email address -->
+
+       <tr>
+         <td class="td1"><label for="email">Email Address</label></td>
+         <td>
+           <input type="text"
+                  name="email"
+                  id="email"
+                  maxlength="30"
+                  title="Please enter your email address"
+                  required
+                  placeholder="shai@gmail.com"
+           />
+         </td>
+       </tr>
+
+       <!-- Phone Number -->
+
+       <tr>
+         <td class="td1"><label for="phonenum">Phone Number</label></td>
+         <td>
+           <input type="text"
+                  name="phonenum"
+                  id="phonenum"
+                  maxlength="12"
+                  pattern="[0-9][3]-[0-9][3]-[0-9][4]"
+                  title="Please enter your phone number"
+                  placeholder="123-123-1234"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <th colspan="4"><hr></th>
+       </tr>
+
+       <!-- Patient Background -->
+
+       <tr>
+         <th colspan="4">Patient's History</th>
+       </tr>
+
+       <!-- Vaccinated ? -->
+
+       <tr>
+         <td class="td1"><label for="vacc1">Have you been vaccinated for COVID-19?</label></td>
+         <td>
+           <input
+                   type ="radio"
+                   id="v1"
+                   name="vacc"
+                   value="Yes"
+           />
+           Yes
+
+           <input
+                   type ="radio"
+                   id="v2"
+                   name="vacc"
+                   value="No"
+           />
+           No
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="insurance">Do you currently have insurance?</label></td>
+         <td>
+           <input
+                   type ="radio"
+                   id="i1"
+                   name="insurance"
+                   value="Yes"
+           />
+           Yes
+
+           <input
+                   type ="radio"
+                   id="i2"
+                   name="insurance"
+                   value="No"
+           />
+           No
+         </td>
+       </tr>
+
+       <!-- Med history -->
+
+       <tr>
+         <td class="td1"><label for="pat_hist">Have you ever had:</label></td>
+         <td>
+           <input type="checkbox" id="option1" value="COVID-19"/>
+           <label for="COVID-19">COVID-19</label>
+
+           <input type="checkbox" id="option2" value="Malaria"/>
+           <label for="Malaria">Malaria</label>
+
+           <input type="checkbox" id="option3" value="E-coli"/>
+           <label for="E-coli">E-coli</label>
+
+           <input type="checkbox" id="option4" value="Cancer"/>
+           <label for="Cancer">Cancer</label>
+
+           <input type="checkbox" id="option5" value="Depression"/>
+           <label for="Depression">Depression</label>
+
+         </td>
+       </tr>
+
+       <!-- User notes about med history -->
+
+       <tr>
+         <td class="td1" align="right"><label for="notes">If you selected any of the above options,<br>please explain:</label></td>
+         <td>
+           <textarea
+             rows="3"
+             cols="50"
+             maxlength="500"
+             id="notes"
+             name="notes"
+             title="Please write a description of the symptoms you are experiencing / have experienced"
+             placeholder="(Insert text here...)"
+             ></textarea>
+           <span id="description_text"></span>
+         </td>
+       </tr>
+
+       <!-- Pain Slider -->
+
+       <tr>
+         <td class="td1"><label for="prange">Rate your pain level<br>Rate from 1 to 10 (10 extreme pain)</label></td>
+         <td>
+           <input type="range"
+                  name="prange"
+                  id="prange"
+                  min="0"
+                  max="10"
+                  value="0"
+           />
+           <span id="range-slider"></span>
+         </td>
+       </tr>
+
+       <tr>
+         <th colspan="4"><hr></th>
+       </tr>
+
+       <!-- Patient Login -->
+
+       <tr>
+         <th colspan="4">Make a Patient Account</th>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="username">Username</label></td>
+         <td>
+           <input type="text"
+                  name="username"
+                  id="username"
+                  minlength="4"
+                  maxlength="20"
+                  title="Please enter your Username"
+                  required
+                  placeholder="shai"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="password">Password</label></td>
+         <td>
+           <input type="password"
+                  name="password"
+                  id="password"
+                  minlength="4"
+                  maxlength="20"
+                  title="Please enter your Password"
+                  required
+                  placeholder="password"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1"><label for="pass2">Re-enter Password</label></td>
+         <td>
+           <input type="password"
+                  name="pass2"
+                  id="pass2"
+                  minlength="4"
+                  maxlength="20"
+                  title="Please re-enter your Password"
+                  required
+                  placeholder="password"
+           />
+         </td>
+       </tr>
+
+       <tr>
+         <td class="td1" colspan="4">
+           <center>
+             <input type="submit" name="submit" id="submit" style="font-family: 'Courier New', Courier, monospace">
+             &nbsp;&nbsp;&nbsp;
+             <input type="reset" name="reset" id="reset" style="font-family: 'Courier New', Courier, monospace">
+           </center>
+         </td>
+       </tr>
+
+     </table>
+   </div>
+  </center>
+</form>
+
+<!-- Footer -->
+
+<footer>
+  <p id="footer">&#169 2026 The Gilgeous Foundation | <a href="https://www.nba.com/player/1628983/shai-gilgeous-alexander" target="_blank" rel="noopener noreferrer">Contact Us!</a></p>
+</footer>
+
+<script src="hw1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+/*
+    Program Name: index.html
+    Author: John Mullender
+    Date created: February 22, 2026
+    Date modified: February 26, 2026
+    Version: 1.0
+    Purpose: Homework1 CSS Form
+*/
+
+header {
+    width: 100%;
+    background-color: rgb(0,125,195);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(253, 187, 48);
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+form {
+    flex-grow: 1;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+main {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    flex-grow: 1;
+}
+
+.image {
+    text-align: left;
+}
+
+.td1 {
+    text-align: right;
+    font-family: "optima", sans serif;
+    font-weight: normal;
+}
+
+th {
+    text-align: center;
+    font-family: "optima", sans serif;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(239, 59, 36);
+}
+
+#footer {
+    text-align: right;
+    font-family: "optima", sans serif;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label {
+    text-align: right;
+    font-family: "optima", sans serif;
+    font-weight: normal;
+}
+
+input {
+    text-align: left;
+    font-family: "optima", sans serif;
+    font-weight: normal;
+}
+
+textarea {
+    text-align: left;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
+
+#today {
+    text-align: left;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+p {
+    text-align: center;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
