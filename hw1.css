@@ -19,7 +19,7 @@ body {
     background-color: rgb(253, 187, 48);
     margin: 0;
     height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     max-height: 100%;
 }
 
@@ -57,10 +57,9 @@ th {
 }
 
 footer {
-    position: static;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
     background-color: rgb(239, 59, 36);
+    width: 100%;
 }
 
 #footer {
