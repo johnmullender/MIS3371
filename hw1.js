@@ -1,9 +1,9 @@
 /*
-    Program Name: index.html
+    Program Name: hw1.js
     Author: John Mullender
     Date created: February 22, 2026
-    Date modified: February 26, 2026
-    Version: 1.0
+    Date modified: February 27, 2026
+    Version: 1.1
     Purpose: Homework1 JavaScript Form
 */
 
