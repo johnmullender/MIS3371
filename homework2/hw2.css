@@ -23,7 +23,13 @@ body{
 }
 
 form {
-    flex-grow: 1;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px; /* Rounds the corners */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Adds a soft drop shadow */
+    width: 90%;
+    max-width: 600px; /* Prevents the form from getting too wide on big screens */
+    margin: 40px auto; /* Centers the card and gives it top/bottom breathing room */
 }
 
 h1, h2 {
@@ -141,3 +147,56 @@ td.outputdata {
     border-spacing: 2px;
 }
 
+body, main, h1, h2, label, input, textarea {
+    font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2 {
+    color: #333333; /* Slightly off-black is softer on the eyes */
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Makes them fill their container nicely */
+    padding: 10px;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Keeps padding from breaking the width */
+    background-color: #f9f9f9;
+}
+
+/* This adds a nice blue Thunder glow when you click inside a box */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: rgb(0, 125, 195);
+    box-shadow: 0 0 5px rgba(0, 125, 195, 0.4);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    background-color: rgb(0, 125, 195); /* Thunder Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+    margin: 5px;
+}
+
+/* Darkens the button slightly when you hover over it */
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: rgb(0, 95, 150);
+}
