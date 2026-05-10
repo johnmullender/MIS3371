@@ -1,24 +1,33 @@
 /*  <!--
-    Name: John Mullender
-    Date created: April 10, 2026
-    Date last edited: April 19, 2026
-    Version: 3.2
-    Description: Homework 3 creating a Patient Registration Form for the medical industry using basic CSS
+   Name: John Mullender
+   Date created: May 1, 2026
+   Date last edited: May 8, 2026
+   Version: 4.3
+   Description: Homework 4 creating a Patient Registration Form for the medical industry using basic CSS
 --> */
 
 header {
+    position: sticky;
+    top: 0;
     width: 100%;
     background-color: rgb(0, 125, 195);
-    padding: 15px 0; /* Added a little padding so it isn't so thin */
+    transition: background-color 0.4 ease-in-out;
+    z-index: 1000;
+}
+header.scrolled{
+    background-color: rgb(239, 59, 36);
+    opacity: 1.0;
 }
 
-body {
+body{
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(253, 187, 48);
     margin: 0;
-    min-height: 100vh; /* make sure the page is height of the viewport */
+    height: 100%;
+    max-height: 100%;
+    min-height: 100vh; /*make sure the page is height of the viewport*/
 }
 
 form {
@@ -52,7 +61,6 @@ main {
     text-align: right;
     font-family: "optima", sans-serif;
     font-weight: normal;
-    padding-right: 10px; /* Gives the text a little space from the inputs */
 }
 
 th {
@@ -61,10 +69,11 @@ th {
 }
 
 footer {
+    position: flex;
+    bottom: 0;
     width: 100%;
     background-color: rgb(239, 59, 36);
-    padding: 10px 0;
-    margin-top: auto;
+    height: 3.0 rem;
 }
 
 #footer {
@@ -80,14 +89,16 @@ label {
     font-weight: normal;
 }
 
-input, textarea, select {
+input {
     text-align: left;
     font-family: "optima", sans-serif;
     font-weight: normal;
-    padding: 6px;
-    margin-bottom: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+}
+
+textarea {
+    text-align: left;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
 }
 
 #today {
@@ -124,27 +135,25 @@ p {
 }
 
 #review {
-    margin-top: 15px;
-    padding: 8px 16px;
-    cursor: pointer;
+    margin-top: 5px;
 }
 
 table.output,
 tr.output,
 td.output {
     width: 500px;
-    background-color: rgb(151, 162, 255);
+    background-color:rgb(151, 162, 255);
     padding: 10px;
     border-spacing: 2px;
-    border-radius: 10px;
-    margin: 20px auto; /* Centers the table */
-    color: black;
+    border-radius: 20px;
+    color:black
 }
 
 td.outputdata {
+    width: 500px;
     background-color: rgb(0, 132, 255);
     padding: 10px;
-    border-radius: 4px;
+    border-spacing: 2px;
 }
 
 /* alert box styling*/
@@ -193,4 +202,38 @@ td.outputdata {
     margin-top: 20px;
     text-align: center;
     font-family: "optima", sans-serif;
+}
+
+/*iframe styling */
+.iframe-container {
+    position: absolute;
+    top: 25%;
+    right: 15px;
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.iframe-container iframe{
+    width: 95%;
+    height: 20%;
+    border: 1px solid black;
+
+}
+/* Cookie welcome message styling*/
+#welcome1 {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family:"optima", sans-serif;
+    font-weight: normal;
+}
+
+#welcome2 {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family:"optima", sans-serif;
+    font-weight: normal;
 }
