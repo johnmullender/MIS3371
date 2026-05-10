@@ -418,6 +418,10 @@ function setCookie(name, cvalue, expiryDays) {
     document.cookie = name + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
 }
 
+function deleteCookie(name) {
+    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
+}
+
 function getCookie(name) {
     var cookieName = name + "=";
     var cookies = document.cookie.split(';');
@@ -455,12 +459,21 @@ const nonSecureFields = [
     "lname",
     "dob",
     "address1",
+    "address2",
     "city",
+    "state",
     "zcode",
     "email",
     "phonenum",
     "username",
-    "range"
+    "range",
+    // radio buttons
+    "s1", "s2", "s3",  // psex
+    "v1", "v2",        // vacc
+    "i1", "i2",        // insur
+    // checkboxes
+    "option1", "option2", "option3", "option4", "option5", "option6",
+    "notes"
 ];
 
 const LS_KEY = "bingbongFormData";
@@ -604,7 +617,7 @@ window.addEventListener("load", function () {
         }
 
         inputElement.addEventListener("input", function () {
-            setCookie(input.cookieName, inputElement.value, 30);
+            setCookie(input.cookieName, inputElement.value, 2); // 48 hours = 2 days
         });
     });
 
@@ -626,6 +639,9 @@ window.addEventListener("load", function () {
 
     // greet the user with name and message + localStorage behavior
     var firstName = getCookie("firstName");
+    var welcome1 = document.getElementById("welcome1");
+    var welcome2 = document.getElementById("welcome2");
+
     if (firstName !== "") {
         // ask if it is really them (Requirement #2 / #3)
         var isUser = confirm("Welcome back, " + firstName + "! Is this you?");
@@ -636,15 +652,12 @@ window.addEventListener("load", function () {
         } else {
             // cookie match + user says it's NOT them -> clear cookies + localStorage
             inputs.forEach(function (input) {
-                setCookie(input.cookieName, "", -1);
+                deleteCookie(input.cookieName);
                 var el = document.getElementById(input.id);
                 if (el) el.value = "";
             });
             clearFormLocalStorage();
         }
-
-        var welcome1 = document.getElementById("welcome1");
-        var welcome2 = document.getElementById("welcome2");
 
         if (welcome1 && welcome2) {
             welcome1.innerHTML = "Welcome back, " + firstName + "!<br>";
@@ -657,7 +670,7 @@ window.addEventListener("load", function () {
                     e.preventDefault();
                     // clear cookies
                     inputs.forEach(function (input) {
-                        setCookie(input.cookieName, "", -1);
+                        deleteCookie(input.cookieName);
                     });
                     // clear localStorage
                     clearFormLocalStorage();
@@ -672,6 +685,12 @@ window.addEventListener("load", function () {
                     location.reload();
                 });
             }
+        }
+    } else {
+        // No cookie exists - first time user
+        if (welcome1 && welcome2) {
+            welcome1.innerHTML = "Welcome New User!<br>";
+            welcome2.innerHTML = "";
         }
     }
 });
@@ -690,7 +709,7 @@ document.getElementById("remember-me").addEventListener("change", function () {
         inputs.forEach(function (input) {
             const inputElement = document.getElementById(input.id);
             if (inputElement && inputElement.value.trim() !== "") {
-                setCookie(input.cookieName, inputElement.value, 30);
+                setCookie(input.cookieName, inputElement.value, 2); // 48 hours = 2 days
             }
         });
         console.log("Cookies saved because 'Remember Me' is checked.");

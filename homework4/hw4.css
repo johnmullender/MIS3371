@@ -69,11 +69,12 @@ th {
 }
 
 footer {
-    position: flex;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgb(239, 59, 36);
-    height: 3.0 rem;
+    height: 3.0rem;
+    z-index: 999;
 }
 
 #footer {
